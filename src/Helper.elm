@@ -31,9 +31,9 @@ type AirplaneStatus
     | Cancelled
 
 
-airPlaneStatus : AirplaneStatus -> String
-airPlaneStatus statu =
-    case statu of
+airPlaneScheduleAction : AirplaneStatus -> String
+airPlaneScheduleAction status =
+    case status of
         Cancelled ->
             "Pedir reembolso"
 
@@ -45,8 +45,3 @@ airPlaneStatus statu =
 
         Boarding ->
             "Buscar boleto"
-
-
-airPlaneScheduleAction : List AirplaneStatus -> List String
-airPlaneScheduleAction status =
-    List.map airPlaneStatus status
